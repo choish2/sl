@@ -1,0 +1,3 @@
+server 불러오기
+cd C:\Users\User\Desktop\최\웹사이트\script의
+node server.js
