@@ -9,21 +9,26 @@
     <link rel="stylesheet" href="https://use.typekit.net/kil7dpx.css">
    
     <style>
-         h4,h3,figure,html,body,p,h2,a,li,ul{text-decoration: none;color:#000 ;font-variant-numeric:normal;padding:0px ;margin: 0px;list-style: none;margin-inline-start: 0 ;margin-inline-end: 0;}
+         h4,h3,figure,html,body,p,h2,a,li,ul{text-decoration: none;color:#000 ;font-variant-numeric:normal;padding:0px ;margin: 0px;list-style: none;margin-inline-start: 0 ;margin-inline-end: 0;font-family: 'Paperlogy-4Regular';}
         .container{max-width: 1440px;margin-left: auto;margin-right: auto;}
        
+        body{}
         .h-wrap{opacity: 100% ; border-bottom: 1px solid #7e7e7e52;background-color:#ffffff}
-        header{width: 100%;flex: 0 0 auto;}  
+        header{width: 100%;flex: 0 0 auto;}
         header .nav{width: 100%;display: flex;}
         .h-wrap.fixed {position: fixed;top: 0;left: 0;width: 100%;z-index: 9999;background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
-        .glb > .logo{display: flex;width: 100%;line-height: 150px;}
-        .glb > .logo img{width: 150px;margin-left: 10px;}
+        .glb .logowrap {display:flex;;width: 100%;box-sizing: border-box}
+        .glb .logo{width: 100%;display: flex;align-items: center;}
+        .glb .logo img{width: 20%;margin-left: 10px;height: auto;}
         
-        .glb{display: flex;justify-content: space-around;}
+
+        .glb{display: flex;justify-content: space-around;font-family: 'Paperlogy-4Regular';}
         .glb > li {display: block;;width: 25%;box-sizing: border-box;padding: 20px 0 20px 0 ;}
         .nav{text-align: center;display: flex;justify-content: end;}
         .nav li{display: inline-block;;width: 20%;height: 100%;padding: 20px 0 20px 0 ;box-sizing: border-box;}
-        .nav li a{display: block;color:#000;height: 100%;}
+        .nav li.hamb{padding: 20px 0 20px 0 ;display: none;}
+        .nav li.hamb img{object-fit: cover;width: 30%;}
+        .nav li a{display: flex;align-items: center;justify-content: center;;color:#000;height: 100%;}
 
         .visual{width: 100%;height: 500px;background-image: url(img/main4.png);box-sizing: border-box;}
         .title{width: 100%;display: flex;align-items: center;justify-content: center;font-size: clamp(1.75rem ,7% ,3rem);box-sizing: border-box;padding: 0 0 30px 0;}
@@ -34,10 +39,9 @@
         .text_box .small_title span{font-size: 1rem;font-weight: normal;word-break: keep-all;}
         .text_box p{margin-bottom: 10px;display: flex;flex-direction: column;word-break: keep-all;}
         .text_box span{word-break: keep-all;}
-        .banner{font-size: clamp(4rem, 8% , 6rem);color: #fff;font-family: 'Paperlogy-6SemiBold';display: flex;align-items: center;justify-content: center;height: 100%;}
+        .banner{font-size: clamp(4rem, 8% , 6rem);color: #fff;;display: flex;align-items: center;justify-content: center;height: 100%;}
 
           .back-to-top {
-        position: fixed;
         right: clamp(1%, 2vw, 2%);
         bottom: 3%;
         padding: 10px 14px;
@@ -55,21 +59,67 @@
         .back-to-top:hover {
         opacity: 1;
         }
+        @media (max-width:768px) {
+             /*헤더*/
+        .h-wrap > .container{max-height: 70px;height: 65px;display: flex;align-items: center;justify-content: center;}
+        .h-wrap > .container{max-height: 70px;height: 65px;display: flex;align-items: center;justify-content: center;}
+        .logowrap{width: 100%;height: 100%;}
+        .glb {
+            display: flex;
+            align-items: center;
+            height: 40%;
+            justify-content: center;
+        }
+        .glb li{padding: 0;}
+        .glb .logo {
+        margin-left: 15px;
+            line-height: normal;
+            
+        }
+        .glb .logo img{width: 70%;margin-left: 0;;}
+        .nav li a{display: flex;align-items: center;justify-content: center;}
+        header .nav{height: 100%;}
+        header .nav li {
+            display: none;
+        }
+        header .nav li.hamb {
+            display: flex;
+            margin-right: 15px;
+            padding: 0;
+
+
+        }
+        .nav li.hamb img{width: 90%;;display: flex;align-items: center;}
+        #scroll{display: none;}
+        .mo_glb{position: fixed;width: 100%;height: 100vh;;background: #000;z-index: 3;opacity: .8;}
+        
+        
+            /*헤더*/
+            .visual{display: none;}
+            .section1{padding: 0px;}
+            .text_box{padding: 20px;width: 100%;border: 0px solid #000; ;}
+            .text_box .middle_title{font-size: clamp(1.125rem , 3% , 1rem);font-weight: normal;word-break: keep-all; margin-bottom: 10px;font-family:'Pretendard-Regular'}
+            .text_box span,.text_box .middle_title span,.text_box p{margin-top: 20px;font-family:'Pretendard-Regular'}
+            .text_box span,.text_box p{color: #505050;word-break: keep-all;}
+            .text_box span.sns{word-break: break-all;}
+            .text_box .small_title{color: #000;word-break: keep-all;}
+        }
+
     </style>
 </head>
 <body>
-      <div id="page-top"></div>
-     <button id="backToTop" class="back-to-top">↑ Top</button>
-    <div class="">
+    <div class="h-wrap">
           <header class="container">
-                <ul class="glb">
-                    <li class="logo">
-                        <img src="img/w_header_logo.png" alt="" srcset="">
+               <ul class="glb">
+                    <li class="logowrap">
+                        <a href="index2.html" class="logo" >
+                            <img src="img/w_header_logo.png" alt="" srcset="">
+                        </a>
                     </li>
                     <ul class="nav">
                         <li class="">
                             
-                            <a href="index.html">
+                            <a href="index2.html">
                             회사소개
                             </a>
                         </li>
@@ -88,9 +138,16 @@
                                 문의하기
                             </a>
                         </li>
+                        <li class="hamb">
+                            <a href="privacy_policy.html">
+                                <img src="img/ham_1.png" alt="">
+                            </a>
+                        </li>
+                        
                     </ul>
                 </ul>
             </header>
+        </div>
             <div class="visual">
                 <figure class="banner">
                     <img src="" alt="">
@@ -213,10 +270,12 @@
                                         ex: 쿠키 설정을 거부하는 방법으로는 회원님이 사용하시는 웹브라우저의 옵션을 선택함으로써 모든 쿠키를 허용하거나 쿠키를 저장할 때마다 확인을 거치거나, 모든 쿠키의 저장을 거부할 수 있습니다.
                                     </span>
                                     
+                                    <span>
                                     설정 방법 예(인터넷 익스플로어의 경우)
                                     : 웹브라우저 상단의 도구>인터넷 옵션>개인정보
 
                                     단, 귀하께서 쿠키 설치를 거부하였을 경우 서비스 제공에 어려움이 있을 수 있습니다.
+                                    <span>
                                 </p>
 
                                 <p class="small_title">
@@ -285,10 +344,12 @@
                                 <p class="small_title">
                                 ▶ 주요 맞춤형 광고 거부(옵트아웃) 안내**
                                 <p>
-                                    * Google : [https://adssettings.google.com](https://adssettings.google.com)
-                                    <span>* Facebook(Instagram 포함) : [https://www.facebook.com/adpreferences/ad\_settings](https://www.facebook.com/adpreferences/ad_settings)
+                                    <span class="sns">
+                                        * Facebook(Instagram 포함) : [https://www.facebook.com/adpreferences/ad\_settings](https://www.facebook.com/adpreferences/ad_settings)
                                     </span>
-                                    <span>* Naver : [https://privacy.naver.com/privacy/center/service](https://privacy.naver.com/privacy/center/service)
+                                    <span class="sns">* Facebook(Instagram 포함) : [https://www.facebook.com/adpreferences/ad\_settings](https://www.facebook.com/adpreferences/ad_settings)
+                                    </span>
+                                    <span class="sns">* Naver : [https://privacy.naver.com/privacy/center/service](https://privacy.naver.com/privacy/center/service)
                                     </span>    
                                 * Kakao : [https://accounts.kakao.com/privacy/policy](https://accounts.kakao.com/privacy/policy)
                                 </p>
@@ -329,5 +390,22 @@
     </div>
     <script src="script/jquery-3.7.1.min.js"></script>
     <script src="script/action.js"></script>
+        <script>
+    $(function(){
+    const $btn = $('#backToTop');
+    $btn.hide();
+    $(window).on('scroll', function(){
+        if ($(this).scrollTop() < 786) {
+        $btn.fadeIn();
+        } else {
+        $btn.fadeOut();
+        }
+    });
+    $btn.on('click', function(e){
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 400);
+    });
+    });
+</script>
 </body>
 </html>
