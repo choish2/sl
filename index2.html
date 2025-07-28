@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="full_page/dist/fullpage.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/kil7dpx.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    
+    <style>
+        @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+        button,h4,h3,figure,html,body,p,h2,a,li,ul{text-decoration: none;color:#000 ;font-variant-numeric:normal;padding:0px ;margin: 0px;list-style: none;margin-inline-start: 0 ;margin-inline-end: 0;font-weight: normal;padding-block: 0;padding-inline: 0;}
+        html,body{width: 100%;height: auto;border-radius: 10px;font-family: 'Pretendard-Regular';letter-spacing: .03rem}    
+        .container{max-width: 1600px;margin-left: auto;margin-right: auto;}
+
+        .wrappp{height: 100%;position: relative;}
+        .wrappp .round4{position: absolute;z-index: 0;width: 30%;left:0; top: 13.5%;transform: translateY(-50%) translateX(-50%);left: 32%;opacity: .5; animation: round4_ 4s ease-in-out infinite ;}
+        .wrappp .round5{position: absolute;width: 10%;left: 44%;transform: translateX(-50%) translateY(-50%);top: 7%;opacity: 30%;animation: round5_ 4s ease-in-out infinite;}
+        @keyframes round5_ {
+            0%{transform: rotate(0) translateX(-50%) translateY(-50%);}
+            50%{transform: rotate(10deg) translateX(-50%) translateY(-50%)} 
+            100%{transform: rotate(0) translateX(-50%) translateY(-50%)} 
+                       
+        }
+
+        .wrappp .round5 img,.wrappp .round4 img{width: 100% ;height: auto;;}
+        @keyframes round4_ {
+            0%{transform: translateY(-50%) translateX(-50%);}
+            50%{transform: translateY(-50%)translateX(-48%);} 
+            100%{transform: translateY(-50%)translateX(-50%);} 
+                       
+        }
+
+
+         :root { --header-h: 0px; }
+        .visual {height: calc(100vh - var(--header-h));box-sizing: border-box;background-color: #ffffff;;}
+         .t1{font-size:clamp(3rem,10%,5.5rem);  font-family: 'Montserrat';margin-bottom: 10px;;}
+      .int1 .swiper-slide{background-color: transparent;}
+       
+
+        /*클릭하면 커지게*/
+        
+        /*클릭하면 커지게*/
+
+        /*스크롤 유도 애니메이션*/
+
+        #scroll
+        {position: fixed;
+        bottom: 4%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: dududu 2.8s ease-in-out infinite;
+        z-index: 999;
+        }
+        #scroll img
+        {
+        width: 50px;
+        }
+        @keyframes dududu { 
+               0%{transform: translateY(40%);}
+               50%{transform: translateY(0%);}
+               100%{transform: translateY(40%)}
+        }
+   
+        /*스크롤 유도 애니메이션*/
+
+        /**/
+       
+        form {
+            max-width: 700px;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            font-family: sans-serif;
+            display: flex;
+            flex-grow: 1;
+            height: 100%;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            width: auto;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px; 
+            border: 1px solid #bbb;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+
+        form input[type="text"]:focus,
+        form input[type="email"]:focus,
+        form textarea:focus {
+            border-color: #ED602A;
+            outline: none;
+        }
+
+        form input[type="checkbox"] {
+            margin-right: 6px;
+            line-height: 1;
+        }
+
+        form button[type="submit"] {
+            background: #cfcfcf;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        form button[type="submit"]:hover {
+            background: #ED602A;
+        }
+
+        form a {
+            font-size: 12px;
+            margin-left: 8px;
+            text-decoration: underline;
+            color: #a3a3a3;
+        }
+
+        form a:hover {color: #5c5c5c;}
+
+        .Contact-form{display: flex;flex-direction: column;flex-grow: 1;}
+        /**/
+
+        /*맨위로*/
+        html {
+        scroll-behavior: smooth;
+        }
+        
+        .quick{ 
+        border-radius: 30px 0  0 30px;background: #000;;position: fixed;bottom: 3%;right: 0;display: flex;flex-direction: column;align-items: flex-end;z-index: 1000;width: 100px ;height: 200px; border: 1px solid #000;}
+        .quick span{display: flex;align-items: center;justify-content: center;}
+        .quick a{display: flex;align-items: center;justify-content: center;width: 100%;height: 50%;background: transparent;color: #fff;border-radius: 0;flex-direction: column;} 
+        .quick button img,.quick a img{background-size: cover;width: 50%;}
+        .quick .quick_ad{display: flex;flex-direction: column;}
+      
+        .back-to-top {
+        width: 100%;
+        height: 50%;
+        background: transparent;
+        color: #fff;
+        font-size: 14px;
+        display: block;
+        border: none;
+        cursor: pointer;
+        border-bottom: 1px solid #b4b4b44d;
+        }
+
+        /*맨위로 끝*/
+
+        /*슬라이드 구역*/
+        .mySwiper3 .swiper-scrollbar
+        {opacity: 1 !important; }
+        .slide2_0{background-image: url();}
+
+        .container03 .mySwiper3 {
+        width: 100%;
+        max-height:1080px ;
+        display: flex;
+        flex-direction: column;
+        }
+
+        .swiper{
+        width: 100%;
+        display: flex;
+        margin-bottom: 30px;
+        }
+
+        .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+       justify-content: center;
+       align-content: center;
+        height: auto;
+        background-color: #ffffff; border-radius: 15px;
+        border: 1px solid #dfdfdfa6;
+        box-sizing: border-box;
+        min-height: 400px;
+
+        }
+
+        .slideflex{display: flex;flex-direction: column;}
+        .slideflex > .title1{width: auto;text-align-last: left;}
+        
+        .swiper-slide .r_wrap{
+            width: 100%; 
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .swiper-slide .r_wrap .resource {      
+        width: 90%;
+        text-align-last: left;
+        padding:  30px 0 20px 0px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #16161618;
+        }
+        
+        .resource h2{font-family: 'Montserrat';font-weight: 600; ;}
+
+        .resource .detail{font-size: clamp(1rem , 3% , 1.25rem);margin-top: 10px;}
+
+        .swiper-slide .r_wrap .s_btn {      
+        width: 90%;
+        display: flex;
+        justify-content: start;
+        padding:0 0 35px 0;
+        box-sizing: border-box;
+        
+        }
+        .swiper-slide .r_wrap .s_btn p{width: 100%;margin-top: 15px;display: flex;flex-wrap: wrap;}
+        .swiper-slide .r_wrap .s_btn p span{box-sizing: border-box;padding: 10px 15px 10px 15px;border: 1px solid #adadad;margin: 0 10px 10px 0px;border-radius: 30px;font-size: 1rem;color:#666666;background-color: #ffffff;}
+        .swiper-slide .r_wrap .s_btn .marg_1{margin-right: 60px;}
+
+        .swiper-slide .r_wrap .s_btn button
+        {
+        width: clamp(5vw , 15% ,10vw);
+        height: 40px;
+        border-radius: 30px;
+        background-color: #fff;
+        border: 1px solid #9e9e9e;
+        }
+
+        .swiper-slide img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        }
+
+        /*슬라이드 2번 시작*/
+        
+        
+        .mySwiper2 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        }
+        .s_wrap2{max-width: 1600px;width: 1600px;height: 100%;display: flex;align-items: center;justify-content: space-between;}
+        .visual2{right: 0;width: 50%;height: 100%;;display: flex;align-items: center;justify-content: center;position: relative;;}
+        .visual2 img {position: absolute;width: 120%;}
+      
+        .swiper-wrapper2 {
+        width: 100%;
+        height: 100%;
+        }
+
+        .swiper-slide2 {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        height: 100%;
+        position: relative;
+        }
+
+        .swiper-slide2 img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+        .int1 .mySwiper2 .swiper-button-next,.swiper-button-prev
+        {color: #8d8d8d;}
+
+        .slide
+        /*슬라이드 구역 끝*/
+        
+          
+        /*헤더 시작*/
+        .h-wrap {background-color: #D6001C !important;}
+        header .nav{width: 100%;display: flex;}
+        .h-wrap.fixed {position: fixed;top: 0;left: 0;width: 100%;z-index: 9999; box-shadow: 0 2px 5px rgba(0,0,0,0.1);background-color: #D6001C}
+        .glb .logowrap {display:flex;;width: 100%;box-sizing: border-box}
+        .glb .logo{width: 100%;display: flex;align-items: center;}
+        .glb .logo img{width: 20%;margin-left: 10px;height: auto;}
+      
+
+        .glb{display: flex;justify-content: space-around;font-family: 'Pretendard-Regular';}
+        .glb > li {display: block;;width: 25%;box-sizing: border-box;padding: 20px 0 20px 0 ;}
+        .nav{text-align: center;display: flex;justify-content: end;}
+        .nav li{display: inline-block;;width: 20%;height: 100%;padding: 20px 0 20px 0 ;box-sizing: border-box;}
+        .nav li.hamb{padding: 20px 0 20px 0 ;display: none;}
+        .nav li.hamb img{object-fit: cover;width: 30%;}
+        .nav li a{display: flex;align-items: center;justify-content: center;;color:#ffffff;height: 100%;}
+        /*헤더 끝*/
+      
+        /*비주얼 시작*/
+        .int1 .swiper-slide{border-radius: 0;border: 0px solid #000;}
+        
+        .section1{overflow: hidden;position: relative;height: 100vh;display: flex;align-items: center;justify-content: center;}
+        .mo_glb{display: none;;}/*수정해야함*/
+        .section1 .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 150%;
+            width: 100%;
+            background-image: url('img/backg_!.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 0;
+            transform: translateY(0%);
+            transition: transform 0.1s ease-out;
+            }
+
+            .section1 .content {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            }
+
+    
+        .swrap > .title1 {width: auto;display: flex;box-sizing: border-box;flex-direction: column;margin-bottom: 40px;}
+       
+        section .title1 p {width: auto;height: auto;}
+        section .title1 .first{font-size: 1.25rem;color: #000;display: flex;width: 100%;margin: 5px 0 5px 0 ; line-height: 1;vertical-align: baseline;font-weight: 600;}
+        section .title1 .first span{font-size: 1.25rem;line-height: 1;;}
+        section .title1 .first .int2{color: #ec4f4f;font-weight: 600;}
+        section .title1 span{font-size: 1rem;display: block;;color: #494949;font-family: 'Pretendard-Regular';}
+        .s-container01{height: auto;padding: 100px;box-sizing: border-box;border-radius: 30px;background-color: #ffffffe8;box-shadow: 0 2px 5px rgba(34, 17, 17, 0.2);}
+        .s-container02{padding: 60px 0 60px 0 ;}
+        .swrap { height: 100%;display: flex;flex-direction: column;width: auto;}
+        .B_List{display: flex;padding: 40px 0 40px 0 ;flex-wrap: wrap;}
+        .B_List li{display: block;;text-align: center;height: auto;box-sizing: border-box;margin:0 10px 20px 10px;width: 18.5%}
+        .B_List li a{display: flex;align-content: center;justify-content: center;padding:20px 0 20px 0 ;background-color: #fff;;}
+        .B_List li a img{object-fit: cover;width: 50%;padding: 10px 0 10px 0 ;position: static;right: 0;}
+
+        .title2 p{display: flex;flex-direction: column;}
+        .tb1{display: block;text-align: center;}
+        .int1{height: 100%;}
+        .main_text{height: 100%;;display: flex;flex-direction: column;;justify-content: center;;;text-align: left;color:#444444 ;font-size: clamp(1rem , 5vw ,2.7rem); font-family: 'Paperlogy-5Medium';letter-spacing: -0.25px;}
+        .main_text .hi{font-size: 1rem;margin-top: 20px;font-family: 'Paperlogy-3Light';color: #8a8a8a;display: block;width: 100%;letter-spacing: .03rem;line-height: 1.3;}
+        .main_text span{width: auto;position: relative;color: #000;}
+        .main_text span::before{content: "";background: #D6001C;width: 13px;height: 13px;position: absolute;;left:100%;;bottom: 8px;transform: translateX(-240%);}
+        .main_text .down_btn{width: 35%;display: block;margin-top: 40px;box-sizing: border-box;padding:10px 0 10px 0 ;;border: 1px solid #dddddd;font-weight: 500;background-color: #00000000;height: 50px;}
+        .main_text .down_btn:hover{border: 1px solid #e27584;transition: border 0.5s ease;}
+        .main_text .down_btn a{width:100%;display: flex;font-size: 1.12rem;color: #888888;font-family: 'Pretendard-Regular';justify-content: center;;}
+        .main_text .down_btn a img{width: 8%;height: 100%;margin-left: 10px;}
+
+        
+
+        .section3{height: 100vh;display: flex;align-items: center;position: relative;overflow: hidden;;}
+        .section3 .round2{width: 30%;;position: absolute;right: -10%;bottom: 0%;transform: translateY(30%) translateX(10%);opacity: .5;animation: Circle2 3s ease-in infinite}
+        @keyframes Circle2 {
+            0%, 100% { transform: translatex(0); }
+            50% { transform: translatex(-30px); }
+            }
+
+        .section3 >.container02{width: 100%;display: flex;;align-items: center;;justify-content: center;flex-direction: column;align-items: center;height: 100%;}
+        .section3 .title1{max-width: 1440px;display: flex;width: 100%;margin-bottom: 70px;justify-content: space-between;}
+        .section3 .carousel_wrap::before,
+       
+        .section3 .title1 .btn{display: flex;max-width: 38%;;flex: 1;justify-content: end;align-items: center;;}
+        .section3 .title1 .btn span{width: 27%;height: 60px;;display: flex;justify-content: center;align-items: center;position: relative;border-radius: 500px;background:rgb(242 243 247/var(--tw-bg-opacity,1));margin-right: 5px;cursor: pointer;}
+        .section3 .title1 .btn span:hover{transition: .6s;background: #000;color: #fff;}
+        .btn span:first-child::before{content: "";display: none;}
+        .section3 .menu_tab{display: flex;width: 100%;display: flex;flex: 1;justify-content: end;}
+        .section3 .menu_tab .tab_wrap{display: flex;justify-content: center;align-items: center;;}
+        .section3 .menu_tab .tab_wrap li{max-width: 100px;display: flex;align-items: center;justify-content: center;background:rgb(242 243 247/var(--tw-bg-opacity,.5));height: 100px;margin-right: 10px;border-radius: 10px;border: 1px solid #e6e6e6c9;}
+       .section3 .menu_tab .tab_wrap li:first-child{border: 1px solid #FA8264 ;opacity: .8;}
+        .section3 .menu_tab .tab_wrap li a{display: flex;flex-direction: column;width: 100%;align-items: center;;}
+        .section3 .menu_tab .tab_wrap li a span{font-family: 'Pretendard-Regular'}
+        .section3 .menu_tab .tab_wrap li a img{width: 58%;}
+        .section3 .menu_tab .tab_wrap li span{margin-top: 6px;color: #444444;font-size: .825rem;}
+
+        section .title1 .first,section .section3 .title1 .first{font-weight: normal;font-family: 'Pretendard-Regular';}
+        section .section3 .title1 .first,section .title1 .first{display: flex;margin: 15px 0 15px 0;font-weight: normal;;}
+        
+        .section3 .carousel_wrap {width:1440px;position:relative;overflow:hidden;max-height: 100%;height: 50%;display: flex;justify-content: space-between;;}
+        .section3 .carousel_wrap::before,
+        .section3 .carousel_wrap::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 80px;
+        height: 100%;
+        z-index: 10;
+        pointer-events: none;
+        }
+        .section3 .carousel_wrap .swiper-slide{gap: 50px;border: 0px solid #000;justify-content: start;}
+        .section3 .carousel_wrap .swiper-pagination-bullet-active{background: #ED602A;}
+        .section3 .carousel_wrap .swiper-pagination{position:fixed;}
+        
+        .section3 .carousel {display:flex;width: 100%;width:max-content;}
+        .section3 .carousel2,.section3 .carousel3{display: none;;}
+
+        
+        .section3 .carousel .card:hover img{transform: scale(1.2);}
+        .section3 .carousel::-webkit-scrollbar {display:none;}
+
+        .section3 .carousel .card {flex:0 0 440px;cursor:pointer;user-select:none;overflow:hidden;align-items: center;}
+
+        .section3 .carousel .card .card-content {width:100%;height:570px;border-radius:20px;overflow:hidden;box-shadow:rgba(0,0,0,0.1) 0 4px 20px;position:relative;}
+
+        .section3 .carousel .card .card-content img {width:100%;height:100%;object-fit:cover;transition: transform 1.2s ease-in-out}
+
+         .section3 .carousel .card .tags{padding: 20px 0px 0px;display: flex;width: 100%;box-sizing: border-box;flex-wrap: wrap;}
+        .section3 .carousel .card .tags .tag{box-sizing: border-box;padding: 5px;margin-right: 9px;color: #8a8a8a;margin-bottom: 5px;}
+        
+        .container04 {display: flex;align-items: center;justify-content: center;max-height: 611px;}
+       
+        .container04 > .title1{color: #fff;height: 100%;}
+        .container04 .contact_box{display: flex; width: 100%;flex-wrap: wrap;}
+        .container04 .contact_box > div {flex: 1 1 calc(50% - 20px);box-sizing: border-box;margin-right: 20px;}
+        .container04 .terms_of_use{display: flex;}
+        .container04 .terms_of_use .agree{display: flex; width: auto;align-items: center;justify-content: center;line-height: 1;}
+        .container04 .terms_of_use .agree a{margin-left: 20px;display: block;}
+        .container04 .btn_1{display: flex;justify-content: end;}
+        .section4{width: 100% ; height: 80vh;background-image: url(img/backg_2.jpg);align-items: center;justify-content: center;display: flex;position: relative;overflow: hidden;}
+        .section4 .round3{width: 40%;;position: absolute;left: -10%;bottom: -20%;animation: Circle3 2s ease-in-out infinite;display: none;}
+        .section4 .main_text2{display: flex;flex-direction: column;font-family: 'Pretendard-SemiBold';}
+        .section4 .main_text2,.section4 .main_text2 h4{color: #fff;font-size: clamp(5rem,16%,7rem);text-align: center;}
+        .section4 .main_text2 .sub_text{font-size: clamp(3rem,10%,4rem);margin: 30px 0 30px 0 ;font-family: 'Pretendard-Regular';}
+        .section4 .main_text2 .btn2{width: auto;}
+        .section4 .main_text2 .btn2 button{width: 250px;height: 70px;;border: 1px solid #ffffff;background: transparent;color: #fff;border-radius: 70px;font-size: 1.25rem;}
+        .section4 .main_text2 .btn2 button a{color: #fff;display: block;height: 100%;display: flex;align-items: center;justify-content: center;}
+        @keyframes Circle3 {
+        0%, 100% { transform: translatey(0); }
+        50% { transform: translatey(-20px); }
+        }
+
+        .section4 .round3 img{object-fit: cover;width: 100%;}
+      
+        .text_box2 h3{font-size: clamp(1.25rem , 5vw , 2.5rem );}
+        .container05{display: flex;justify-content: center;}
+        .container05 h2 {height: auto;display: flex;border-right: 1px solid #dadada13;box-sizing: border-box;padding-right: 60px;}
+       
+
+        .section5{box-sizing: border-box; ;background-color: #ececec;width: 100%;}
+        .section5 .contact_us{width: 100%;max-height: 700px;overflow: hidden;}
+        .section5 .contact_us img{object-fit: 100%;width: 100%;}
+        .map_box{margin: 30px 40px 0 0 ;max-height:430px;height: auto;;display: block;border: 1px solid #d6d6d6;border-radius: 10px;overflow: hidden;}
+        .map_box img{object-fit: cover;width: 100%;;border-radius: 10px;}
+        
+        .info-list{display: flex;flex-direction: column;}
+        .info-list li{width: 100%;display: flex;margin-bottom: 20px;}
+        .info-list li span{margin-left: 10px;}
+        .info-list li > figure img{object-fit: cover;width: 30px;}
+
+        /*비주얼과 끝 */
+
+        /*푸터 시작*/        
+          footer{background-color: #D6001C;}
+        footer .container05{box-sizing: border-box; padding: 60px 0 60px 0 ;color: #000;}
+        footer .container05 figure{width: 100%;margin: 0 auto;display: flex;align-items: center;justify-content: center;}
+        footer .container05 figure img{width: 200px; }
+        .container05 .footer_infom{width: 100%;margin-bottom: 10px;;box-sizing: border-box;display: flex;flex-grow: 1;justify-content: start;}
+        .container05 .footer_infom li {width: 20%;border: 1px solid #000;height: 100%;}
+        .container05 .footer_infom li a{color: #fff;text-align:left;display: block;height: 100%;position: relative;text-align: center;}
+        .container05 .footer_infom li a::before{content: "";position: absolute;left:0 ;width: 1px;height: 15px;background-color: #9b9b9b56;top: 50%;transform: translateY(-50%);}
+        .container05 .footer_infom li:nth-child(1) a::before{content: "";position: absolute;left:0 ;width: 1px;height: 15px;background-color: #ffffff00;top: 50%;transform: translateY(-50%);}
+         .container05 .info_box h4{color:#fff}
+        .f-wrap{width: auto;margin-left: 50px;display: flex;justify-content:start;align-items: start;box-sizing: border-box;font-family: 'Pretendard-Light';color: #a1a1a1;}
+        .f-wrap .info_box{width: auto;color: #fff;text-align: left;padding-right: 50px;border-right: 1px solid #9b9b9b3f;box-sizing: border-box;}
+        .f-wrap .info_box li span{color: #fff;text-align: left;margin-right: 10px;}
+        
+        .Qna {box-sizing: border-box;padding-left: 50px;}
+        .Qna li{color: #fff;}
+        .Qna .f_glb{margin-top: 20px;}
+        .Qna .f_glb{display: flex;}
+        
+        .Qna .f_glb span:nth-child(1) a{color: #fff;padding-right: 20px;;padding-left: 0px;box-sizing: border-box;display: inline-block;position: relative;}
+        .Qna .f_glb span a{color: #fff;padding-left: 20px;box-sizing: border-box;display: block;}
+        .Qna .f_glb span:not(:last-child) a::before{content: "";position: absolute;;width: 1px ; display:inline-block;;height: 13px;background: #7575753f;;right: 0;top: 50%;transform: translateY(-50%);}
+
+        
+
+        /*푸터 끝*/
+
+        /*미디어 쿼리*/
+      @media (max-width: 768px) {
+    .quick{display: none;}
+    .swiper-wrapper{display: flex;align-items: center;}
+    .swiper-slide{display: flex;;justify-content: center;max-height:auto}
+    .swiper-button-next:after, .swiper-button-prev:after{font-size: 20px;}
+    .container{max-width: 650px;height: auto;}
+    .s-container01{max-width: 90%;padding: 10px;height: 100%;background-color: transparent;}
+    .swrap{width: 100%;}
+    section .title1 p{font-size: clamp(2rem , 10% , 3rem);}
+    form{border:0px solid #000;background-color: transparent;}
+    .wrappp .round4{width: 50%;top: 7%;left: 50%;margin-top: 25px;}
+    .wrappp .round5{width: 15%;left: 65%;top: 5%;}
+    .visual2{position: absolute;left: 52%;top: 50%;transform: translateX(-50%) translateY(-50%);}
+
+    /*glb*/
+    .mo_glb{position: fixed;width: 100%;height: 100vh;;background: #000;z-index: 3;opacity: .9;;flex-direction: column;align-items: center;justify-content: center;display: none;}
+    .mo_glb .mo_nav{display: flex;flex-direction: column;width: 90%;height: 100%;}
+    .mo_glb .logobox{width: 90%;;height: 15%;display: flex;justify-content: start;align-items: end;flex-direction: column;}
+    .mo_glb .logobox span{height: auto;font-size: .825rem;font-family: 'Pretendard-ExtraLight';margin-right: 5px;;}
+    .mo_glb .logobox figure{height: 50%;}
+    .mo_glb .logobox img{height: 80%;background-size: cover;}
+    .mo_glb .logobox span,.mo_glb .logobox p{color: #fff;}
+
+    .mo_glb .mo_nav li{height: 60px;}
+    .mo_glb .mo_nav li:last-child{border-bottom: 1px solid #c9c9c949;}
+    .mo_glb .mo_nav > .hamb{width: 100%;display: flex;justify-content: space-between;border-bottom: 0px solid #000;height: 65px;margin-bottom: 20px;;}
+    .mo_glb .mo_nav .hamb a{display: flex;justify-content: end;width: 100%;margin-right: 2px}
+    .mo_glb .mo_nav li:last-child{padding-bottom: 20px;}
+    .mo_glb .mo_nav li a{color: #fff;display: flex;justify-content: end;height: 100%;width: 100%;align-items: center;font-size: 1.25rem;}
+    .mo_glb .mo_nav img{height: 26px;;background-size: cover;}
+    /*glb*/
+
+    .main_text{display: none;}
+    section .title1 .first .int2{font-size: clamp(1rem,5%,1.5rem);}
+
+    .t1{margin: 0;}
+    /*헤더*/
+    .h-wrap > .container{max-height: 70px;height: 65px;display: flex;align-items: center;justify-content: center;}
+    .logowrap{width: 100%;height: 100%;}
+    .glb {
+        display: flex;
+        align-items: center;
+        height: 40%;
+        justify-content: center;
+    }
+    .glb li{padding: 0;}
+    .glb .logo {
+       margin-left: 15px;
+        line-height: normal;
+        
+    }
+    .glb .logo img{width: 70%;margin-left: 0;;}
+    .nav li a{display: flex;align-items: center;justify-content: center;}
+    header .nav{height: 100%;}
+    header .nav li {
+        display: none;
+    }
+    header .nav li.hamb {
+        display: flex;
+        margin-right: 15px;
+        padding: 0;
+
+
+    }
+    .nav li.hamb img{width: 90%;;display: flex;align-items: center;}
+    #scroll{display: none;}
+    
+    
+    /*헤더*/
+    
+    
+    
+    .B_List {
+        flex-direction: column;
+        align-items: center;
+    }
+    .B_List li {
+        width: 90%;
+    }
+    .visual{height: calc(50vh - var(--header-h));}
+    section .title1 {display: flex;}
+    section .title1 .first{font-size: 1rem;}
+    section .title1 span{word-break: break-all;white-space: normal;font-size: .8rem;;}
+    .section1 .title1 span{color: #fff;}
+    section .title1 > p {font-size: clamp(2rem,10%,3rem);}
+    .section1{width: 100%;height: 60vh;position: relative;;background-color: transparent;}
+    .section1 .swrap{display: flex;;justify-content: center;}
+    .section1 .title1{margin-bottom: 20px;display: none;}
+    .section1 .title1 .first,.section1 .title1 > p,.section1 .title1 .first .int2{color:#fff;font-weight: normal;}
+    .section1 .s-container01{box-shadow: none;}
+    .section1 .background{height: 100%;top: 0;transform: translateY(0%);transition: none;}
+    .resource h2{font-size: 1.5rem;padding: 10px 0 10px 0 ;}
+    .swrap .swiper-slide{min-height:240px;}
+    .resource .detail{display: none;}
+    .swiper-slide .r_wrap .resource{padding: 10px 0 10px 0;}
+    
+   
+   
+    .swiper-slide .r_wrap .s_btn p{margin-top: 10px;}
+    .section3{height: 235vh;;}
+    .section3 .container03{width: 80%;}
+    .section3 .title1{display: flex;flex-direction: column;justify-content: center;align-items: center;margin-bottom: 10px;}
+    .section3 .title1 .f_wrap{text-align: center;}
+    .section3 .title1 .btn{display: none;}
+    
+    .section3 .menu_tab{justify-content: center;display: flex;align-items: center;margin-top: 20px;}
+    .section3 .menu_tab .tab_wrap li{width: 50px;;height: 50px;display: flex;margin-right: 7px;;}
+    .section3 .menu_tab .tab_wrap li:last-child{margin: 0;}
+    .section3 .menu_tab .tab_wrap li a{width: 100%;height: 100%;display: flex;justify-content: center;}
+    .section3 .menu_tab .tab_wrap li a span{display: none;}
+   
+    .section3 .carousel_wrap{margin-top: 10px;width: 100%;height:auto;}
+    .section3 .swiper{margin-bottom: 0;}
+    .section3 .swiper-wrapper{display: flex;flex-direction: column;}
+    .section3 .swiper-slide:first-child{display: flex;gap: 20px;}
+    .section3 .swiper-slide{margin-bottom: 0 !important;height: auto;display: none;flex-direction: column;}
+
+    .section3 .carousel{width:100%;flex-direction: column;}
+
+     .section3 .carousel .card .tags{display: none;}
+     .section3 .carousel .card-title{height: 400px;}
+    .section3 .carousel .card{width: 100%;height: 375px;flex: none;margin: 0 auto;}
+    .section3 .carousel .card .card-content{width: 100%;height: auto;border-radius: 0;} 
+    .section3 .carousel .card .card-content img{background-size: cover;width: 100%;}
+    .section3 .carousel .card .tags .tag,.swiper-slide .r_wrap .s_btn p span{padding: 5px;font-size: .825rem;}
+    .section3 .next{width: 100%;display: flex;align-items: center;justify-content: center;}
+    .section3 .next .more{width: 90%;height: 50px;border-radius: 30px;border: 1px solid #cacaca93;margin-top: 20px;}
+
+
+    .f-wrap {
+        margin-left: 0;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .f-wrap .Qna{margin: 0;padding: 0;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+    .footer_infom li {
+        width: 45%;
+        margin: 5px;
+    }
+    
+    .container05 .footer_infom {display: flex;align-items: center;justify-content: center;align-items: center;;font-size: .8rem;}
+
+    .info_box {
+        display: none;
+    }
+
+    .container04 {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .container04 .title1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        display: none;
+    }
+
+
+    .container04 .title1 .Contact-form
+    {height: 80%;}
+
+    form input[type="text"], form input[type="email"], form textarea
+    {margin-top: 3px;font-size: .8rem;}    
+
+    form label,.agree{font-size: 1rem;}
+
+    .container04 .contact_box {
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+    }
+
+    section .container04 .contact_box > div {
+        flex: 1;
+        margin-right: 0;
+        max-width: 100%;
+        min-width: none;
+    }
+
+    .container04 .terms_of_use {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form label{font-weight: normal;}
+
+    .container04 .terms_of_use .agree {
+        margin-bottom: 10px;
+        font-weight: normal;
+    }
+    section .title1{font-size: clamp(1rem , 5vw , 1.25rem);}
+    .container04 .btn_1 {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .Contact-form, form {
+        padding: 20px;
+        box-sizing: border-box;
+
+    }
+    form div{margin-bottom: 3px;}
+    .container04 .btn_1{display: flex;justify-content: end;}
+
+    .section4 {
+        height: 50vh;
+        box-sizing: border-box;
+        padding: 30px 0 30px 0 ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .section4 .round3{bottom:-10%}
+   .swiper-slide .r_wrap .s_btn button
+        {
+        width: clamp(10vw , 40% ,30vw);
+        height: 40px;
+        border-radius: 30px;
+        background-color: #fff;
+        border: 1px solid #9e9e9e;
+            }
+            
+    .section4::before{content:"";width: 100%;height: 100%;;background: #000;position: absolute;opacity: .4;}        
+    .section4 .main_text2, .section4 .main_text2 h4{font-size: clamp(1.5rem, 7% ,1.75rem);z-index: 2;}
+    .section4 .main_text2 .sub_text{font-size: clamp(1rem, 4%, 1.125rem);margin: 15px 0 15px 0 ;}
+    .section4 .main_text2 .btn2{display: flex;align-items: center;justify-content: center;}
+    .section4 .main_text2 .btn2 button{flex: .3;height: 50px;margin-right: 10px;}
+    footer .container05{display: flex;flex-direction: column;justify-content: center;padding: 35px 0 35px 0 ;}
+    .container05 h2{padding: 0;margin-bottom: 10px;}
+    .container05 h2 figure{object-fit: cover;width: 100%;}
+    footer .container05 h2 figure img{object-fit: cover;width:90%;}
+    footer .container05 h2 figure{max-width: 150px;margin-bottom: 4px;}
+    footer .container05 .footer_infom{margin: 0 auto;display: flex;;align-items: center;justify-content: center;}
+    .container05 .footer_infom li a::before{content: "";position: absolute;left:0 ;width: 1px;height: 15px;background-color: #9b9b9b56;top: 50%;transform: translateY(-50%);}
+    .container05 .footer_infom li:nth-child(1) a::before{content: "";position: absolute;left:0 ;width: 1px;height: 15px;background-color: #ffffff00;top: 50%;transform: translateY(-50%);}
+    footer .Qna li{font-size: .85rem;margin-bottom: 3px;}
+    footer .Qna li,footer .Qna .f_glb{color: #d1d1d1;}
+    footer .Qna .f_glb{margin-top: 15px;}
+    .Qna .f_glb span:not(:last-child) a::before{background: #a0a0a081;}
+    }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .B_List li {
+        width: 30%;
+    }
+    .container03 .boxwrap {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .container03 .boxwrap figure,
+    .container03 .boxwrap .text_box2 {
+        width: 48%;
+    }
+    .container04 .contact_box > div {
+        flex: 1 1 calc(50% - 10px);
+        margin-right: 10px;
+    }
+    form {
+        max-width: 1000px;
+        padding: 25px;
+        
+    }
+   
+
+    .t1 {
+        font-size: clamp(1.5rem, 5vw, 3.5rem);
+    }
+
+    .page-top{opacity: 0;display: none;}
+    
+    .container05 {
+        padding: 40px 0 40px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container05 h2 {
+        max-width: 150px;
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+   
+}
+    
+
+        /*미디어 쿼리 끝*/        
+    </style>
+
+    
+</head>
+    
+<body>
+    <div class="mo_glb">
+         <ul class="mo_nav">
+                         <li class="hamb">
+                                <a href="">
+                                    <img src="img/exit.png" alt="">
+                                </a>
+                                
+                        </li>
+                        
+                        <li class="">
+                           
+                            <a href="#visual">
+                            회사소개
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#section1">
+                                서비스
+                            </a>
+                        </li>
+                        <li class=""> 
+                            <a href="#section3">
+                                포트폴리오
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#section4">
+                                문의하기
+                            </a>
+                        </li>
+                         <li class="">
+                            <a href="contect.html">
+                               바로상담
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="logobox">
+                        <figure>
+                            <img src="img/header_logo.png" alt="">
+                        </figure>
+                        <span>
+                            COPYRIGHT ©
+                            Slowvery. All Rights Reserved.
+                         </span>
+                   </div>
+    </div>
+    <div class="quick">
+        
+      <div id="page-top"></div>
+        
+        <button id="backToTop" class="back-to-top">
+            <img src="img/go_top_icon.png" alt="">
+        </button>
+        <a href="contect.html" class="quick_ad">
+            <span>
+                <img src="img/ad_icon.png" alt="">
+            </span>
+        </a>
+    </div>
+    
+    <div id="scroll">
+        <figure>
+            <a href="">
+             <img src="img/scroll_icon.png" alt="">
+            </a>
+        </figure>
+    </div>
+     <div class="wrappp">
+            <div class="round4">
+                        <img src="img/anime_3.png" alt="">
+            </div>
+            <div class="round5">
+                        <img src="img/anime_4.png" alt="">
+            </div>
+
+        <div class="h-wrap">
+            <header class="container">
+                <ul class="glb">
+                    <li class="logowrap">
+                        <a href="#visual" class="logo" >
+                            <img src="img/header_logo.png" alt="" srcset="">
+                        </a>
+                    </li>
+                    <ul class="nav">
+                        <li class="">
+                            
+                            <a href="#visual">
+                            회사소개
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#section1">
+                                서비스
+                            </a>
+                        </li>
+                        <li class=""> 
+                            <a href="#section3">
+                                포트폴리오
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#section4">
+                                문의하기
+                            </a>
+                        </li>
+                        <li class="hamb">
+                            <a href="">
+                                <img src="img/ham_2.png" alt="">
+                            </a>
+                        </li>
+                
+                    </ul>
+                </ul>
+            </header>
+        </div>
+            <div class="visual" id="visual">
+                <div class="int1">
+                        <div class="swiper mySwiper2">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide slide2_0">
+                                <div class="s_wrap2">
+                                    <div class="visual2">
+                                            <img src="img/mo2.png" alt="">
+                                        </div>
+                                        <h2 class="container main_text">
+                                            <span>
+                                            고객사와 함께 천천히,
+                                            </br>
+                                            하지만 정확하게 성장해나갈 것 입니다
+                                            </span>
+                                            <p class="hi">다양한 고객사의 만족스러운 결과를 위해  순수한 노력과 진실된 열정을 다해온 슬로우베리는 </br>
+                                                브랜드와 고객의 니즈를 면밀히, 정확하게 파악하여 가장 정확한 길을 찾아 고객사와 함께 성장해왔습니다.</br>
+
+                                                앞으로도 슬로우베리는 고객사와 함께 천천히, 깊게 고민하여 정확하게 성장해나갈 것입니다. 
+                                            </p>
+                                            <button class="down_btn">
+                                                <a href="download/슬로우베리_회사소개서_ver2025.06.pptx" download>
+                                                    회사소개서 다운로드 <img src="img/down_btn.png" alt="">
+                                                </a>                                      
+                                            </button>
+                                        </h2>
+                                
+                                    </div>
+                                </div>
+                            <div class="swiper-slide slide2_1">
+                                        
+                                        <h2 class="container main_text">
+                                            <span>
+                                                슬로우베리만의 역량으로
+                                                </br>
+                                                최적의 퍼포먼스를 완성합니다
+                                            </span>
+                                        </h2>
+                                
+
+                            </div>
+                            <div class="swiper-slide slide2_2">
+                                        
+                                        <h2 class="container main_text">
+                                            <span>
+                                            슬로우베리는 지속적인 
+                                            </br>
+                                            성과를 이끌어낼 것을 약속합니다
+                                            </span>
+                                        </h2>
+                            
+
+                            </div>
+                            </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            
+                </div>
+          <section class="fullpage" id="fullpage">        
+               <div class="section section1" id="section1">
+                    <div class="background">
+                    </div>
+                   
+                    
+                    <div class="container s-container01">
+                        <div class="swrap">
+                        <h2 class="title title1">
+                            <p class="t1">Service</p>
+                                <span class="first">
+                                        <span class="int2">국내 최고</span>
+                                    의 브랜드&nbsp; 
+                                        <span class="int2">커뮤니케이션</span> 
+                                    &nbsp;전문 기업
+                                </span> 
+                                <span>브랜드의 목표 달성을 위해 고객의 구매 여정에 맞춘 차별화된 광고 전략을 설계하고 실행합니다.</span>
+                        </h2>
+
+                        <div class="swiper mySwiper mySwiper1">
+                                <div class="swiper-wrapper">
+  
+                                    
+                                <div class="swiper-slide slide0">
+                                        <div class="r_wrap">
+                                            <div class="resource">
+                                                <h2>Search Ads</h2>
+                                                <p class="detail">
+                                                    검색 엔진에 특정 키워드를 입력했을 때,키워드와</br>관련된 광고를 검색 결과 상단에 노출시키는 광고
+                                                </p>
+                                            </div>
+                                            <div class="s_btn">
+                                                <p class="tag">
+                                                    <span>Naver</span>
+                                                    <span>Kakao</span>
+                                                    <span class="marg_1">nate</span>
+                                                    <span >Google</span>
+                                                    <span>Google SA 360</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide slide0">
+                                        <div class="r_wrap">
+                                            <div class="resource">
+                                                <h2>Display Ads</h2>
+                                                <p class="detail">
+                                               소비자의 관심사, 행동, 오디언스에 맞춰<br>주요 검색엔진 및 App에 이미지, 동영상을 노출시키는 광고
+                                                </p>
+                                            </div>
+                                            <div class="s_btn">
+                                                <p class="tag">
+                                                    <span>Naver GFA</span>
+                                                    <span>Kakao Moment</span>  
+                                                    <span>Google PMAX / GDN / UAC / Youtube</span>
+                                                    <span>Google DV 360</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                <div class="swiper-slide slide0">
+                                        <div class="r_wrap">
+                                            <div class="resource">
+                                                <h2>Network Display Ads</h2>
+                                                <p class="detail">
+                                                    소비자의 관심사, 행동, 오디언스에 맞춰<br>다양한 제휴 지면 및 App에 이미지, 동영상을 노출시키는 광고
+                                                </p>
+                                            </div>
+                                            <div class="s_btn">
+                                                <p class="tag">
+                                                    <span>Targeting Gates</span>
+                                                    <span>Mobon</span>
+                                                    <span>A D N</span>
+                                                    <span>Criteo</span>
+                                                    <span>CAULY</span>
+                                                    <span>Buzzvil</span>
+                                                    <span>Dable</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                <div class="swiper-slide slide0">
+                                        <div class="r_wrap">
+                                            <div class="resource">
+                                                <h2>SNS Marketing</h2>
+                                                <p class="detail">
+                                                    소셜 네트워크를 활용하여</br>제품, 서비스, 브랜드를 홍보하고 소비자와 소통하는 광고
+                                                </p>
+                                            </div>
+                                            <div class="s_btn">
+                                                <p class="tag">
+                                                    <span>Facebook</span>
+                                                    <span>instargram</span>
+                                                    <span>Tictok</span>
+                                                    <span>Linked in</span>
+                                                    <span>X(구 Twitter)</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                <div class="swiper-slide slide0">
+                                        <div class="r_wrap">
+                                            <div class="resource">
+                                                <h2>Viral Marketing</h2>
+                                                <p class="detail">
+                                                    콘텐츠, 메시지등 사람들 사이에서</br>자발적으로 공유, 확산을 유도하는 광고
+                                                </p>
+                                            </div>
+                                            <div class="s_btn">
+                                                <p class="tag">
+                                                    <span>Influencer(Blog / Instargram / tiktok)</span>
+                                                    <span>Café / community</span>
+                                                    <span>지식IN</span>
+                                                    <span>PR</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                <div class="swiper-slide slide0">
+                                        <div class="r_wrap">
+                                            <div class="resource">
+                                                <h2>SEO</h2>
+                                                <p class="detail">
+                                                    웹사이트 또는 콘텐츠를 검색엔진에 최적화하여 검색 시</br>자연스럽게 상위(비광고 영역)에 노출되도록 하는 마케팅
+                                                </p>
+                                            </div>
+                                            <div class="s_btn">
+                                                <p class="tag">
+                                                    <span>Web site</span>
+                                                    <span class="marg_1">Google Youtube</span>
+                                                    <span>Naver Place</span>
+                                                    <span>Google Map</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide slide0">
+                                        <div class="r_wrap">
+                                            <div class="resource">
+                                                <h2>Reward Marketing</h2>
+                                                <p class="detail">
+                                                    사용자의 자발적 참여 및 특정 행동을 통한 보상형 광고 <br>(앱 설치 / 미션 / 시청 등)
+                                                </p>
+                                            </div>
+                                            <div class="s_btn">
+                                                <p class="tag">
+                                                    <span>OK Cashbag</span>
+                                                    <span>L Pay / L Point</span>
+                                                    <span>T Money</span>
+                                                    <span>Cash walk</span>
+                                                    <span>Toss</span>   
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            <div class="swiper-pagination"></div>x
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="section section3" id="section3">
+                     <div class="round2">
+                        <img src="img/anime_1.png" alt="">
+                    </div>
+                  
+                    <div class="container02">
+                            <div class="title title1">
+                                <div class="f_wrap">
+                                    <p class="t1">Portpolio</p>
+                                    <span class="first">
+                                        <span class="int2">국내 최고</span>의 브랜드&nbsp; <span class="int2">커뮤니케이션</span> &nbsp;전문 기업
+                                    </span>
+                                    <span>슬로우베리는 이런 고객사와 함께하고 있습니다.
+                                    </span>
+                                </div>
+                               <div class="menu_tab">
+                                <ul class="tab_wrap">
+                                   
+                                    <li>
+                                        <a href="" class="all">
+                                            <img src="img/Frame 278.png" alt="">
+                                            <span>전체보기</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="ad">
+                                            <img src="img/Frame 276.png" alt="">
+                                            <span>광고</span>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="maket">
+                                            <img src="img/Frame 277.png" alt="">
+                                            <span>마케팅</span>
+                                        </a>
+                                    </li>
+                                   
+                                </ul>
+                            </div>     
+                            
+                            </div>
+                         
+                            <div class="carousel_wrap">
+                                <div class="carousel carousel1">
+                                    <div class="swiper mySwiper4">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                
+                                                <div class="card currys">
+                                                    
+                                                    <div class="card-content">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/1.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                        <div class="tag">#Full-funnel</div>
+                                                        <div class="tag">#viral</div> 
+                                                        <div class="tag">#Marketing</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="card lapc">
+                                                    <div class="card-content">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/2.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                    <div class="tag">#Full-funnel</div>
+                                                        <div class="tag">#viral</div> 
+                                                        <div class="tag">#Marketing</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                                <div class="card sonic">
+                                                    <div class="card-content">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/5.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                        <div class="tag">#Full-funnel</div>
+                                                        <div class="tag">#Marketing</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                             <div class="swiper-slide">
+                                                <div class="card sono">
+                                                    <div class="card-content">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/6.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                    <div class="tag">#SNS</div>
+                                                        <div class="tag">#viral</div> 
+                                                    <div class="tag">#Marketing</div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                                <div class="card nutrip">
+                                                    <div class="card-content">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/7.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                        <div class="tag">#Search Ad</div>
+                                                        <div class="tag">#Display Ad</div>          
+                                                        <div class="tag">#Viral</div>          
+                                                    <div class="tag">#Marketing</div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                                <div class="card amos">
+                                                    <div class="card-content">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/8.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                    <div class="tag">#Full-funnel</div>
+                                                    <div class="tag">#Viral</div>
+                                                    <div class="tag">#Marketing</div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                          
+                                            <div class="swiper-slide">
+                                                <div class="card">
+                                                    <div class="card-content ebay">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/9.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                    <div class="tag">#SNS</div>
+                                                        <div class="tag">#Marketing</div>
+                                                        </div>
+                                                </div>
+
+                                            <div class="card">
+                                                    <div class="card-content satorius">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/10.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                        <div class="tag">#Search Ad</div>
+                                                        <div class="tag">#Display Ad</div>
+                                                        <div class="tag">#SNS</div>
+                                                        <div class="tag">#Marketing</div>
+                                                        </div>
+                                                </div>
+
+                                            <div class="card">
+                                                    <div class="card-content the na+">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/11.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                        <div class="tag">#Full-funnel</div>
+                                                        <div class="tag">#Viral</div>
+                                                        <div class="tag">#SEO</div>
+                                                        <div class="tag">#Marketing</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <div class="card">
+                                                        <div class="card-content">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/12.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                        <div class="tag">#Display Ad</div>
+                                                            <div class="tag">#Viral</div>
+                                                            <div class="tag">#Marketing</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--Ad--->
+                                            
+                                                    <div class="card">
+                                                        <div class="card-content">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/13.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                        <div class="tag">#SNS</div>
+                                                            <div class="tag">#Marketing</div>
+                                                            </div>
+                                                    </div>
+                                                
+                                                    <div class="card">
+                                                        <div class="card-content hurom">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/14.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                            <div class="tag">#Full-funnel</div>
+                                                            <div class="tag">#Viral</div>
+                                                            <div class="tag">#Marketing</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide"> 
+                                                        <div class="card">
+                                                            <div class="card-content amore">
+                                                            <div class="card-title">
+                                                                <img src="img/card_content/15.png" alt="">
+                                                            </div>
+                                                    
+                                                            </div>
+                                                            <div class="tags">
+                                                                <div class="tag">#SEO</div>
+                                                                <div class="tag">#Marketing</div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                    <div class="card">
+                                                        <div class="card-content kommodvintage">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/16.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                            <div class="tag">#Full-funnel</div>
+                                                            <div class="tag">#Viral</div>
+                                                            <div class="tag">#Marketing</div>
+                                                        </div>
+                                                    </div>
+                                            
+                                                
+                                                    <div class="card">
+                                                        <div class="card-content K-v">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/17.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                            <div class="tag">#SNS</div>
+                                                            <div class="tag">#Viral</div>
+                                                            <div class="tag">#Marketing</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                             <div class="swiper-pagination"></div>                                                
+                                        </div>
+                                         
+                                    </div>
+
+
+                                    <div class="carousel carousel2">
+                                    <div class="swiper mySwiper4">
+                                        <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                        
+                                                    <div class="card sono">
+                                                        <div class="card-content">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/6.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                        <div class="tag">#SNS</div>
+                                                            <div class="tag">#viral</div> 
+                                                        <div class="tag">#Marketing</div>
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                    <div class="card nutrip">
+                                                        <div class="card-content">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/7.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                            <div class="tag">#Search Ad</div>
+                                                            <div class="tag">#Display Ad</div>          
+                                                            <div class="tag">#Viral</div>          
+                                                        <div class="tag">#Marketing</div>
+                                                        </div>
+                                                    </div>
+
+                                            
+                                                    <div class="card">
+                                                        <div class="card-content ebay">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/9.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                        <div class="tag">#SNS</div>
+                                                            <div class="tag">#Marketing</div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                            <div class="swiper-slide">
+                                                <div class="card">
+                                                        <div class="card-content satorius">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/10.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                            <div class="tag">#Search Ad</div>
+                                                            <div class="tag">#Display Ad</div>
+                                                            <div class="tag">#SNS</div>
+                                                            <div class="tag">#Marketing</div>
+                                                            </div>
+                                                    </div>
+                    
+                                                    <div class="card">
+                                                            <div class="card-content">
+                                                            <div class="card-title">
+                                                                <img src="img/card_content/12.png" alt="">
+                                                            </div>
+                                                    
+                                                            </div>
+                                                            <div class="tags">
+                                                            <div class="tag">#Display Ad</div>
+                                                                <div class="tag">#Viral</div>
+                                                                <div class="tag">#Marketing</div>
+                                                            </div>
+                                                        </div>
+
+                                                
+                                                        <div class="card">
+                                                            <div class="card-content">
+                                                            <div class="card-title">
+                                                                <img src="img/card_content/13.png" alt="">
+                                                            </div>
+                                                    
+                                                            </div>
+                                                            <div class="tags">
+                                                            <div class="tag">#SNS</div>
+                                                                <div class="tag">#Marketing</div>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                
+                                                    <div class="swiper-slide">
+                                                        <div class="card">
+                                                            <div class="card-content K-v">
+                                                            <div class="card-title">
+                                                                <img src="img/card_content/17.png" alt="">
+                                                            </div>
+                                                    
+                                                            </div>
+                                                            <div class="tags">
+                                                                <div class="tag">#SNS</div>
+                                                                <div class="tag">#Viral</div>
+                                                                <div class="tag">#Marketing</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+
+
+                                <div class="carousel carousel3">
+                                    <div class="swiper mySwiper4">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                
+                                                <div class="card currys">
+                                                    
+                                                    <div class="card-content">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/1.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                        <div class="tag">#Full-funnel</div>
+                                                        <div class="tag">#viral</div> 
+                                                        <div class="tag">#Marketing</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="card lapc">
+                                                    <div class="card-content">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/2.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                    <div class="tag">#Full-funnel</div>
+                                                        <div class="tag">#viral</div> 
+                                                        <div class="tag">#Marketing</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                                <div class="card sonic">
+                                                    <div class="card-content">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/5.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                        <div class="tag">#Full-funnel</div>
+                                                        <div class="tag">#Marketing</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="swiper-slide">
+
+                                                
+                                                <div class="card nutrip">
+                                                    <div class="card-content">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/7.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                        <div class="tag">#Search Ad</div>
+                                                        <div class="tag">#Display Ad</div>          
+                                                        <div class="tag">#Viral</div>          
+                                                    <div class="tag">#Marketing</div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                                <div class="card amos">
+                                                    <div class="card-content">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/8.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                    <div class="tag">#Full-funnel</div>
+                                                    <div class="tag">#Viral</div>
+                                                    <div class="tag">#Marketing</div>
+                                                        </div>
+                                                </div>
+                                                <div class="card">
+                                                <div class="card-content satorius">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/10.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                        <div class="tag">#Search Ad</div>
+                                                        <div class="tag">#Display Ad</div>
+                                                        <div class="tag">#SNS</div>
+                                                        <div class="tag">#Marketing</div>
+                                                        </div>
+                                                </div>
+
+                                            </div>
+                                          
+                                            <div class="swiper-slide">
+                                                   
+                                            <div class="card">
+                                                    <div class="card-content the na+">
+                                                    <div class="card-title">
+                                                        <img src="img/card_content/11.png" alt="">
+                                                    </div>
+                                            
+                                                    </div>
+                                                    <div class="tags">
+                                                        <div class="tag">#Full-funnel</div>
+                                                        <div class="tag">#Viral</div>
+                                                        <div class="tag">#SEO</div>
+                                                        <div class="tag">#Marketing</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                        <div class="card-content nexen">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/12.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                        <div class="tag">#Display Ad</div>
+                                                            <div class="tag">#Viral</div>
+                                                            <div class="tag">#Marketing</div>
+                                                        </div>
+                                                    </div>
+                                                  <div class="card">
+                                                        <div class="card-content hurom">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/14.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                            <div class="tag">#Full-funnel</div>
+                                                            <div class="tag">#Viral</div>
+                                                            <div class="tag">#Marketing</div>
+                                                        </div>
+                                                    </div>    
+                                            </div>
+
+                                          
+                                                <div class="swiper-slide"> 
+                                                        <div class="card">
+                                                            <div class="card-content amore">
+                                                            <div class="card-title">
+                                                                <img src="img/card_content/15.png" alt="">
+                                                            </div>
+                                                    
+                                                            </div>
+                                                            <div class="tags">
+                                                                <div class="tag">#SEO</div>
+                                                                <div class="tag">#Marketing</div>
+                                                            </div>
+                                                        </div>
+                                                
+                                                    <div class="card">
+                                                        <div class="card-content kommodvintage">
+                                                        <div class="card-title">
+                                                            <img src="img/card_content/16.png" alt="">
+                                                        </div>
+                                                
+                                                        </div>
+                                                        <div class="tags">
+                                                            <div class="tag">#Full-funnel</div>
+                                                            <div class="tag">#Viral</div>
+                                                            <div class="tag">#Marketing</div>
+                                                        </div>
+                                                    </div>
+                                            
+                                                
+                                                    
+                                                </div>
+                                            
+                                            </div>
+                                            <div class="swiper-pagination"></div>                                                
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="next">
+                                   <button class="more">
+                                     View more
+                                   </button>
+                                </div>
+                            </div>
+                    </div>
+                <div class=" section4" id="section4"> 
+                    <div class="container container04">
+                            <div class="main_text2">
+                                <h4>퍼포먼스 마케팅의 핵심은</h4>
+                                <span>구매 가능성이 높은 소비자를<br>
+                                    합리적으로 확보하는 것.
+                                </span>
+                                <span class="sub_text">지금, 당신의 브랜드 성장을 함께 고민해보세요.</span>
+                            <div class="btn2">
+                                <button class="f_btn">
+                                    <a href="contect.html">
+                                        견적문의
+                                    </a>
+                                </button>
+                                <button>
+                                   <a href="https://naver.me/GiairrD8" target="_blank">
+                                    지도보기
+                                   </a>
+                                </button>        
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            
+            </section>
+            
+        <footer>
+            <div class="container container05">
+                <h2>
+                    <figure>
+                        <img src="img/header_logo.png" alt="">
+                    </figure>
+                </h2>
+                <div class="f-wrap">
+                    <ul class="info_box">   
+                        <h4>주식회사 슬로우베리</h4>   
+                        <li> 
+                            <span>대표이사:이윤정</span>
+                            <span>사업자등록번호:830-88-02974 </span>
+                        </li>
+                        <li> 
+                            <span>주소:경기 성남시 분당구 야탑동 537-4 우당프라자 402호 </span>
+                            <span>Tel:010-1234-5678</span>
+                        </li>
+                        <li> 
+                            <span> Copyright © 2022 Slowberry . All Rights Reserved.</span>
+                        </li>
+                        
+                    </ul>
+                    <ul class="Qna">
+                        <li> 
+                            <span>광고문의</span>
+                            <span>1234@5678.com </span>
+                        </li>
+                        <li> 
+                            <span>기타문의</span>
+                            <span>1234@5678.com</span>
+                        </li>
+                        <li class="f_glb"> 
+                              <span>
+                                <a href="#">맨위로</a>
+                            </span>
+                            <span>
+                                <a href="privacy_policy.html">
+                                    개인정보 처리방침
+                                </a>
+                            </span>
+                        </li>
+                        
+                    </ul>
+                </div>
+             
+            </div>
+        </footer> 
+        
+
+    </div>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="full_page/dist/fullpage.js"></script>
+    <script src="script/action.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+       <script>
+    var swiper = new Swiper(".mySwiper2", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
+         <script>
+    var swiper = new Swiper(".mySwiper3", {
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+      
+    });
+    </script>
+      <script>
+ var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        768: { 
+            slidesPerView: 3,
+            spaceBetween: 10
+        }
+    }
+});
+
+
+
+window.addEventListener('resize', function() {
+    swiper.update();
+});
+
+  </script>
+<script>
+ let swiperInstance;
+
+function initSwiper() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 768) {
+    if (swiperInstance) {
+      swiperInstance.destroy(true, true);
+      swiperInstance = undefined;
+    }
+    return;
+  }
+
+  if (swiperInstance) {
+    swiperInstance.destroy(true, true);
+    swiperInstance = undefined;
+  }
+
+  const commonOptions = {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  };
+
+  swiperInstance = new Swiper(".mySwiper4", {
+    ...commonOptions,
+    direction: "vertical",
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+    },
+  });
+}
+
+initSwiper();
+window.addEventListener("resize", () => {
+  initSwiper();
+});
+</script>
+<script>
+  window.addEventListener('scroll', function () {
+    const section = document.querySelector('.section1');
+    const bg = section.querySelector('.background');
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      const scrollPercent = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+      bg.style.transform = `translateY(${scrollPercent * -20}%)`;
+    }
+    if (window.innerWidth <= 768) {
+    bg.style.transform = 'translateY(0%)';
+    return;
+    }
+  });
+</script>
+
+
+
+<script>
+ /*
+const carousel = document.querySelector(".carousel");
+    carousel.innerHTML += carousel.innerHTML;
+
+    const width = carousel.scrollWidth / 2;
+
+    const style = document.createElement("style");
+    style.innerHTML = `
+    @keyframes loop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-${width}px); }
+    }
+
+    .carousel {
+    animation: loop 90s linear infinite;
+    }
+    `;
+    document.head.appendChild(style);
+  */
+
+</script>
+</body>
+
+</html>
