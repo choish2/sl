@@ -145,7 +145,7 @@
     .Qna .f_glb span a{color: #fff;padding-left: 20px;box-sizing: border-box;display: block;}
     .Qna .f_glb span:not(:last-child) a::before{content: "";position: absolute;;width: 1px ; display:inline-block;;height: 13px;background: #7575753f;;right: 0;top: 50%;transform: translateY(-50%);}
     textarea{font-family: 'noto'}
-  
+    
 
 
    @media (max-width: 1024px) {
@@ -263,6 +263,26 @@
     flex-direction: column;
     gap: 10px;
   }
+
+  
+    /*glb*/
+    .mo_glb{position: fixed;max-width: 100vw;width: 100% !important;;height: 100vh;;background: #000;z-index: 3;opacity: .9;;flex-direction: column;align-items: center;justify-content: center;display: none;}
+    .mo_glb .mo_nav{display: flex;flex-direction: column;width: 90%;height: 100%;}
+    .mo_glb .logobox{width: 90%;;height: 15%;display: flex;justify-content: start;align-items: end;flex-direction: column;}
+    .mo_glb .logobox span{height: auto;font-size: .825rem;font-family: 'Pretendard-ExtraLight';margin-right: 5px;;}
+    .mo_glb .logobox figure{height: 50%;}
+    .mo_glb .logobox img{height: 80%;background-size: cover;}
+    .mo_glb .logobox span,.mo_glb .logobox p{color: #fff;}
+
+    .mo_glb .mo_nav li{height: 60px;}
+    .mo_glb .mo_nav li:last-child{border-bottom: 1px solid #c9c9c949;}
+    .mo_glb .mo_nav > .hamb{width: 100%;display: flex;justify-content: space-between;border-bottom: 0px solid #000;height: 65px;margin-bottom: 20px;;}
+    .mo_glb .mo_nav .hamb a{display: flex;justify-content: end;width: 100%;margin-right: 2px}
+    .mo_glb .mo_nav li:last-child{padding-bottom: 20px;}
+    .mo_glb .mo_nav li a{color: #fff;display: flex;justify-content: end;height: 100%;width: 100%;align-items: center;font-size: 1.25rem;}
+    .mo_glb .mo_nav img{height: 26px;;background-size: cover;}
+    /*glb*/
+
 }
 
    
@@ -273,6 +293,52 @@
 </head>
 
 <body>
+   <div class="mo_glb">
+         <ul class="mo_nav">
+                         <li class="hamb">
+                                <a href="">
+                                    <img src="img/exit.png" alt="">
+                                </a>
+                                
+                        </li>
+                        
+                        <li class="">
+                           
+                            <a href="#visual">
+                            회사소개
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#section1">
+                                서비스
+                            </a>
+                        </li>
+                        <li class=""> 
+                            <a href="#section3">
+                                포트폴리오
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#section4">
+                                문의하기
+                            </a>
+                        </li>
+                         <li class="">
+                            <a href="contect.html">
+                               바로상담
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="logobox">
+                        <figure>
+                            <img src="img/header_logo.png" alt="">
+                        </figure>
+                        <span>
+                            COPYRIGHT ©
+                            Slowvery. All Rights Reserved.
+                         </span>
+                   </div>
+    </div>
     <div class="h-wrap">
      <header class="container">
                 <ul class="glb">
@@ -305,7 +371,7 @@
                         </li>
                         <li class="hamb">
                             <a href="">
-                                <img src="img/ham_1.png" alt="">
+                                <img src="img/ham_2.png" alt="">
                             </a>
                         </li>
                 
@@ -395,6 +461,33 @@
     <script src="script/jquery-3.7.1.min.js"></script>
     <script src="script/action.js"></script>
     <script src="script/server.js"></script>
+    <script>
+        $(function() {
+      $('.nav li.hamb').click(function(e) {
+        e.preventDefault();
+        $('.mo_glb').fadeIn(400).css({display:"flex"});
+        return false
+      });
+    });
+
+
+    $(function() {
+      $('.mo_glb .mo_nav .hamb').click(function(e) {
+        e.preventDefault();
+        $('.mo_glb').fadeOut(400);
+        return false
+      });
+    });
+
+
+
+    $(function() {
+      $('.mo_glb .mo_nav li a:gt(0)').click(function(e) {
+        $('.mo_glb').fadeOut(400);
+        
+      });
+    });
+  </script>
    <script>
   document.querySelector(".contact-form form").addEventListener("submit", async function (e) {
     e.preventDefault(); // 기본 제출 막기
