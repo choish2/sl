@@ -77,31 +77,20 @@ $(function () {
   });
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    applyCarouselOnce('.carousel1');
-  }, 50);
+$('.all').click(function (e) {
+  e.preventDefault();
+  $('.carousel1').css({ display: 'flex' });
+  $('.carousel2, .carousel3').css({ display: 'none' });
 });
 
-$(function () {
-  $('.all').click(function (e) {
-    e.preventDefault();
-    $('.carousel1').css({ display: 'flex' });
-    $('.carousel2, .carousel3').css({ display: 'none' });
-    applyCarouselOnce('.carousel1');
-  });
+$('.ad').click(function (e) {
+  e.preventDefault();
+  $('.carousel2').css({ display: 'flex' });
+  $('.carousel1, .carousel3').css({ display: 'none' });
+});
 
-  $('.ad').click(function (e) {
-    e.preventDefault();
-    $('.carousel2').css({ display: 'flex' });
-    $('.carousel1, .carousel3').css({ display: 'none' });
-    applyCarouselOnce('.carousel2');
-  });
-
-  $('.maket').click(function (e) {
-    e.preventDefault();
-    $('.carousel3').css({ display: 'flex' });
-    $('.carousel1, .carousel2').css({ display: 'none' });
-    applyCarouselOnce('.carousel3');
-  });
+$('.maket').click(function (e) {
+  e.preventDefault();
+  $('.carousel3').css({ display: 'flex' });
+  $('.carousel1, .carousel2').css({ display: 'none' });
 });
