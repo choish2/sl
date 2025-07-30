@@ -3,7 +3,7 @@
         button,h4,h3,figure,html,body,p,h2,a,li,ul{text-decoration: none;color:#000 ;font-variant-numeric:normal;padding:0px ;margin: 0px;list-style: none;margin-inline-start: 0 ;margin-inline-end: 0;font-weight: normal;padding-block: 0;padding-inline: 0;}
         html,body{width: 100%;height: auto;border-radius: 10px;font-family: 'Pretendard-Regular';letter-spacing: .03rem}    
         .container{max-width: 1600px;margin-left: auto;margin-right: auto;}
-        .h-wrap{background:rgb(214, 0, 28);}
+        .h-wrap{background:rgb(214, 0, 28) !important;}
 
         .wrappp{height: 100%;position: relative;overflow: hidden;}
         .wrappp .round4{position: absolute;z-index: 0;width: 30%;left:0; top: 13.5%;transform: translateY(-50%) translateX(-50%);left: 32%;opacity: .5; animation: round4_ 4s ease-in-out infinite ;}
