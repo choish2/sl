@@ -1045,7 +1045,166 @@
     <script src="full_page/dist/fullpage.js"></script>
     <script src="script/action.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
- 
+    <script>
+            
+    var swiper = new Swiper(".mySwiper2", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+         
+    var swiper = new Swiper(".mySwiper3", {
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+      
+    });
+    
+
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      }
+    }
+  });
+
+  window.addEventListener("resize", function () {
+    swiper.update();
+  });
+
+
+
+  let swiperInstance;
+
+  function initSwiper() {
+    const screenWidth = window.innerWidth;
+    const swiperWrapper = document.querySelector(".mySwiper4 .swiper-wrapper");
+    const slides = document.querySelectorAll(".mySwiper4 .swiper-slide");
+
+    if (screenWidth < 768) {
+      if (swiperInstance) {
+        swiperInstance.destroy(true, true);
+        swiperInstance = undefined;
+      }
+
+      if (swiperWrapper) {
+        swiperWrapper.removeAttribute("style");
+      }
+
+      slides.forEach((slide) => {
+        slide.removeAttribute("style");
+        slide.classList.remove(
+          "swiper-slide-active",
+          "swiper-slide-next",
+          "swiper-slide-prev"
+        );
+      });
+
+      return;
+    }
+
+    if (swiperInstance) {
+      swiperInstance.destroy(true, true);
+      swiperInstance = undefined;
+    }
+
+    swiperInstance = new Swiper(".mySwiper4", {
+      direction: "vertical",
+      loop: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        }
+      }
+    });
+  }
+
+  window.addEventListener("load", initSwiper);
+  window.addEventListener("resize", initSwiper);
+
+
+
+  window.addEventListener('scroll', function () {
+    const section = document.querySelector('.section1');
+    const bg = section.querySelector('.background');
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      const scrollPercent = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+      bg.style.transform = `translateY(${scrollPercent * -20}%)`;
+    }
+    if (window.innerWidth <= 768) {
+    bg.style.transform = 'translateY(0%)';
+    return;
+    }
+  });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    function setupCarousel(carouselSelector, moreSelector) {
+        const slides = document.querySelectorAll(`${carouselSelector} .swiper-slide`);
+        const moreBtn = document.querySelector(moreSelector);
+        let currentIndex = 1;
+        let isExpanded = false;
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle("visible", index < currentIndex);
+            });
+
+            moreBtn.textContent = currentIndex === slides.length ? "접기" : "View more +";
+            isExpanded = currentIndex === slides.length;
+        }
+
+        function handleMoreClick() {
+            if (!isExpanded) {
+                if (currentIndex < slides.length) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 1;
+                }
+            } else {
+                currentIndex = 1;
+            }
+            updateSlides();
+        }
+
+        updateSlides();
+        moreBtn.addEventListener("click", handleMoreClick);
+    }
+
+    // 각 캐러셀에 대해 설정
+    setupCarousel(".carousel1", ".more1");
+    setupCarousel(".carousel2", ".more2");
+    setupCarousel(".carousel3", ".more3");
+});
+
+    </script>
 
 
 </body>
