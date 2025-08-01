@@ -13,7 +13,7 @@
     @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
     @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
     button,h4,h3,figure,html,body,p,h2,a,li,ul{text-decoration: none;color:#000 ;font-variant-numeric:normal;padding:0px ;margin: 0px;list-style: none;margin-inline-start: 0 ;margin-block: 0;margin-inline-end: 0;font-weight: normal;padding-block: 0;padding-inline: 0;}
-    html,body{width: 100%;height: 100vh;font-family: 'Paperlogy-5Medium';letter-spacing: .03rem;}    
+    html,body{width: 100%;height: 100vh;font-family: 'NanumSquareNeoBold';letter-spacing: .03rem;}    
     .container{max-width: 1600px;margin-left: auto;margin-right: auto;display: flex;}
         .visual{display: flex;flex-grow: 1;height: auto;overflow: hidden;overflow: hidden;border-bottom: 1px solid #dadada;;background-image: url(img/backg_4.png);background-repeat: no-repeat;background-position: center;}
         .visual img{width: 100%;}
@@ -26,7 +26,7 @@
         .glb .logo img{width: 20%;margin-left: 2px;height: auto;}
         
  
-        .glb{display: flex;justify-content: space-around;font-family: 'Paperlogy-4Regular';width: 100%;}
+        .glb{display: flex;justify-content: space-around;font-family: 'NanumSquareNeoBold';width: 100%;}
         .glb > li {display: block;;width: 25%;box-sizing: border-box;padding: 20px 0 20px 0 ;}
         .nav{text-align: center;display: flex;justify-content: end;}
         .nav li{display: inline-block;;width: 20%;height: 100%;padding: 20px 0 20px 0 ;box-sizing: border-box;}
@@ -37,7 +37,6 @@
          
     body {
       margin: 0;
-      font-family: 'Pretendard', sans-serif;
       background-color: #f8f8f8;
       color: #222;
       display: flex;
@@ -60,14 +59,14 @@
     .contact-info {
       flex: 1;
       min-width: 300px;
-      font-family: 'Paperlogy-4Regular';
+      font-family: 'NanumSquareNeoBold';
     }
 
     .contact-info h2 {
       font-size: clamp(3rem , 8% , 5rem);
       margin-bottom: 20px;
       line-height: 1.2;
-      font-family: 'Paperlogy-6SemiBold';
+      font-family: 'NanumSquareNeoExtraBold';
       position: relative;
     }
     .contact-info h2::before{content: "";position: absolute; background: #D6001C;width: 13px;height: 13px;position: absolute;;left:88%;;bottom: 8px;transform: translateX(-20%);}
@@ -133,11 +132,11 @@
     .container05 .footer_infom li a{color: #fff;text-align:left;display: block;height: 100%;position: relative;text-align: center;}
     .container05 .footer_infom li a::before{content: "";position: absolute;left:0 ;width: 1px;height: 15px;background-color: #9b9b9b56;top: 50%;transform: translateY(-50%);}
     .container05 .footer_infom li:nth-child(1) a::before{content: "";position: absolute;left:0 ;width: 1px;height: 15px;background-color: #ffffff00;top: 50%;transform: translateY(-50%);}
-    .container05 .info_box h4{color:#fff;font-family: 'Noto sans KR', sans-serif}
-    .f-wrap{width: auto;margin-left: 50px;display: flex;justify-content:start;align-items: start;box-sizing: border-box;font-family: 'Paperlogy-3Light';color: #a1a1a1;}
-    .f-wrap .info_box{width: auto;color: #fff;text-align: left;padding-right: 50px;border-right: 1px solid #9b9b9b3f;box-sizing: border-box;font-family: 'Noto sans KR', sans-serif}
-    .f-wrap .info_box li span{color: #fff;text-align: left;margin-right: 10px;font-family: 'Noto sans KR', sans-serif}
-    .Qna {box-sizing: border-box;padding-left: 50px;font-family: 'Noto sans KR', sans-serif}
+    .container05 .info_box h4{color:#fff;}
+    .f-wrap{width: auto;margin-left: 50px;display: flex;justify-content:start;align-items: start;box-sizing: border-box;;color: #a1a1a1;}
+    .f-wrap .info_box{width: auto;color: #fff;text-align: left;padding-right: 50px;border-right: 1px solid #9b9b9b3f;box-sizing: border-box;}
+    .f-wrap .info_box li span{color: #fff;text-align: left;margin-right: 10px;}
+    .Qna {box-sizing: border-box;padding-left: 50px;}
     .Qna li{color: #fff;}
     .Qna .f_glb{margin-top: 20px;}
     .Qna .f_glb{display: flex;}
@@ -145,7 +144,7 @@
     .Qna .f_glb span a{color: #fff;padding-left: 20px;box-sizing: border-box;display: block;}
     .Qna .f_glb span:not(:last-child) a::before{content: "";position: absolute;;width: 1px ; display:inline-block;;height: 13px;background: #7575753f;;right: 0;top: 50%;transform: translateY(-50%);}
     textarea{font-family: 'noto'}
-    
+    .mo_glb{display: none;}
 
 
    @media (max-width: 1024px) {
@@ -217,7 +216,7 @@
  
 
   .contact-info h2 {
-    font-size: 1.5rem;
+    font-size: 1.39rem;
     margin-bottom: 10px;
   }
   .contact-info h2::before{content: "";left: 98%;bottom: 10%;width: 8px;height: 8px;;transform: translateX(-150%);}
@@ -240,7 +239,7 @@
     font-size: 14px;
   }
 
-  .consent-wrapper .checkbox_wrap,.contact-form .detail{font-size: 0.8rem;}
+  .consent-wrapper .checkbox_wrap,.contact-form .detail{font-size: 0.75rem;display: flex;align-items: center;}
 
   .f-wrap {
     width: 100%;
@@ -304,30 +303,26 @@
                         
                         <li class="">
                            
-                            <a href="#visual">
-                            회사소개
+                            <a href="index.html#visual">
+                             Company introduction
                             </a>
                         </li>
                         <li class="">
-                            <a href="#section1">
-                                서비스
+                            <a href="index.html#section1">
+                              Service
                             </a>
                         </li>
                         <li class=""> 
-                            <a href="#section3">
-                                포트폴리오
+                            <a href="index.html#section3">
+                              Portfolio
                             </a>
                         </li>
                         <li class="">
-                            <a href="#section4">
-                                문의하기
+                            <a href="index.html#section4">
+                              Contact us
                             </a>
                         </li>
-                         <li class="">
-                            <a href="contect.html">
-                               바로상담
-                            </a>
-                        </li>
+                      
                     </ul>
                     <div class="logobox">
                         <figure>
