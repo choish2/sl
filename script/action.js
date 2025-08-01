@@ -13,7 +13,7 @@ window.addEventListener('scroll', () => {
   if (scrollY > 200) {
     btn.style.display = 'block';
   } else {
-    btn.style.display = 'none';
+    btn.style.display = 'block';
   }
 
   if (scrollY > 0) {
@@ -77,22 +77,12 @@ $(function () {
   });
 });
 
-$('.all').click(function (e) {
-  e.preventDefault();
-  $('.carousel1').css({ display: 'flex' });
-  $('.carousel2, .carousel3').css({ display: 'none' });
-});
+function toggleMoGlbVisibility() {
+  const moGlb = document.querySelector('.mo_glb');
+  if (window.innerWidth > 768) {
+    moGlb.style.display = 'none';
+  }
+}
 
-$('.ad').click(function (e) {
-  e.preventDefault();
-  $('.carousel2').css({ display: 'flex' });
-  $('.carousel1, .carousel3').css({ display: 'none' });
-});
-
-$('.maket').click(function (e) {
-  e.preventDefault();
-  $('.carousel3').css({ display: 'flex' });
-  $('.carousel1, .carousel2').css({ display: 'none' });
-});
-
-  
+window.addEventListener('resize', toggleMoGlbVisibility);
+window.addEventListener('DOMContentLoaded', toggleMoGlbVisibility);
